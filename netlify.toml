@@ -5,3 +5,4 @@
   [headers.values]
     Cross-Origin-Resource-Policy = "cross-origin"
     Access-Control-Allow-Origin = "*"
+    Cache-Control: no-cache
