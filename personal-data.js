@@ -525,8 +525,8 @@ console.log('nem neso da se seknam');
               console.log('No errors: Form will be submitted');
             }
           });
-      console.log('parent', window.parent);
-      console.log('top', window.top);
+      // console.log('parent', window.parent);
+      // console.log('top', window.top);
       window.parent.postMessage({ source: 'ims-loyalty', width: window.innerWidth, height: window.innerHeight }, '*');
     })
 console.log('izgleda mi e tuka problem facepalm');
