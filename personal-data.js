@@ -19,9 +19,10 @@ $(document).ready(
       // TRIDENT/ for IE 11 version
       // MSIE for IE below 11 version
       var browserIsIE = navigator.userAgent.toUpperCase().indexOf("TRIDENT/") != -1 || navigator.userAgent.toUpperCase().indexOf("MSIE") != -1;
-
+console.log('glej da ne rabotes');
       setTimeout(function() {
         loadInputsFromStorage();
+        console.log('ke ti skrsam glavata');
       }, 500)
 
       function loadInputsFromStorage() {
@@ -524,7 +525,7 @@ $(document).ready(
               console.log('No errors: Form will be submitted');
             }
           });
-      console.log(window.parent);
-      console.log(window.top);
+      console.log('parent', window.parent);
+      console.log('top', window.top);
       window.parent.postMessage({ source: 'ims-loyalty', width: window.innerWidth, height: window.innerHeight }, '*');
     })
