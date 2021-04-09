@@ -524,5 +524,7 @@ $(document).ready(
               console.log('No errors: Form will be submitted');
             }
           });
+      console.log(window.parent);
+      console.log(window.top);
       window.parent.postMessage({ source: 'ims-loyalty', width: window.innerWidth, height: window.innerHeight }, '*');
     })
