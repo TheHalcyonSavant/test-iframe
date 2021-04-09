@@ -1,0 +1,279 @@
+input[type=text] {
+  font-size: 14px;
+  border-radius: 0px;
+  height: 50px;
+  padding-top: 20px;
+}
+
+input:focus ~ .floating-label-field-required,
+input:not(:focus):valid ~ .floating-label-field-required {
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+input:focus ~ .floating-label-field-not-required,
+input:not(:placeholder-shown) ~  .floating-label-field-not-required {
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.floating-label-field-required {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 13px;
+  transition: 0.2s ease all;
+}
+
+.floating-label-field-not-required {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 13px;
+  transition: 0.2s ease all;
+}
+
+.floating-label-field-required:after {
+  content: ' *';
+}
+
+.floating-label-field-required.without-after-element:after {
+  content: none;
+}
+
+.select-wrap {
+  border: 1px solid #d3d7cf;
+  border-radius: 0px;
+  padding: 0 5px;
+  width: 200px;
+  height: 50px;
+}
+
+.select-wrap label {
+  font-size: 11px;
+  padding: 2px 8px 0;
+}
+
+.select-wrap-2 {
+  margin-top: -8px;
+  margin-left: 4px;
+}
+
+.select-large {
+  border: 1px solid #d3d7cf;
+  border-radius: 0px;
+  padding: 0 5px;
+  width: 300px;
+  height: 50px;
+}
+
+.select-large label {
+  font-size: 11px;
+  padding: 2px 8px 0;
+}
+
+.select-large-2 {
+  margin-top: -8px;
+  margin-left: 4px;
+}
+
+select {
+  background-color: #fff;
+  border: 0px;
+}
+
+
+.header {
+ margin-top:40px;
+}
+
+h6 {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  height: 10px;
+  margin-bottom:-39px;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+input[type=submit] {
+  width: 100%;
+  height:50px;
+  background-color: #F4F2F0;
+  border: 1px solid #E8E8E8;
+  color: grey;
+  font-weight: 500;
+  font-size:14px;
+  padding: 5px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  border-radius: 4px;
+  background-color: #d3d7cf;
+  color: white;
+}
+
+.button-wrap {
+  margin-top:40px;
+  float: right;
+  padding-bottom: 30px
+}
+
+div.select-wrap.invalid {
+  /*border: 1px solid red;*/
+}
+
+div.select-wrap.valid {
+  border: 1px solid green;
+}
+
+input.invalid {
+  /*border: 1px solid red;*/
+}
+
+input.valid {
+  border: 1px solid green;
+}
+
+input.invalid-radio {
+  box-shadow: 0 0 0 1px red;
+}
+
+input.valid-radio {
+  box-shadow: 0 0 0 0px grey;
+}
+
+.error {
+  display: none;
+ 
+}   
+
+.error-message-show {
+  color: red;
+}
+
+.alert {
+  line-height: 10px;
+  border-radius: 0px !important;
+}
+
+.hyper-link {
+  margin-top: 8px;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: #00ffff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+/* start - radio & checkbox buttons*/
+input[type='radio'] {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid gray;
+}
+
+input[type='radio']:checked {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid gray;
+
+}
+
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 30%;
+  margin: 35% auto;
+  border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+  background: black;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  outline: none;
+  border: 1px solid gray;
+}
+
+input[type='checkbox']:checked {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  outline: none;
+  border: 2px solid gray;
+
+}
+
+input[type='checkbox']:before {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 30%;
+  margin: 35% auto;
+  border-radius: 0%;
+}
+
+input[type='checkbox']:checked:before {
+  background: black;
+}
+
+.role {
+  margin-right: 80px;
+  margin-left: 20px;
+  margin-top: 7px;
+  font-weight: normal;
+}
+
+.checkbox label {
+  margin-bottom: 20px !important;
+}
+
+.form-check {
+  margin-bottom: 30px;
+}
+
+.form-check-input {
+  margin-bottom: 30px;
+}
+/* end - radio & checkbox buttons*/
