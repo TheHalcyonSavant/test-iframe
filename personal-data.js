@@ -104,7 +104,7 @@ console.log('glej da ne rabotes');
         $input.removeClass('valid').addClass('invalid');
         // $input.next('div.alert').removeClass('error').addClass('error-message-show');
       }
-
+console.log('i sea');
       function calculateAge($dateOfBirth) {
         var today = new Date();
         var birthDate = new Date($dateOfBirth);
@@ -150,7 +150,7 @@ console.log('glej da ne rabotes');
         buildingNumber = houseAndBuildingNumber.substring(houseNumber.length, houseAndBuildingNumber.length);
         buildingNumber = removeAllWhiteSpaces(buildingNumber);
       }
-
+console.log('so e rabotata?');
       // In case user refreshes or is redirected to this page with all intact inputs
       // and submit button is clicked, then on('input', function()..) should be triggered
       // so valid/invalid classes are added to input before submission
@@ -209,7 +209,7 @@ console.log('glej da ne rabotes');
         console.log('cleared');
         localStorage.clear();
       })
-
+console.log('zaso se taka ponasas?');
       $('select').on('change', function() {
         if ($(this).val() == '') {
           $('div.select-wrap').removeClass('valid').addClass('invalid');
@@ -255,7 +255,7 @@ console.log('glej da ne rabotes');
           addClassInvalid(input);
         }
       })
-
+console.log('zafrkavas li me?');
       $('#input_additionalAddress').on('input', function() {
         if (browserIsIE) {
           $('#spanAdditionalAddress').remove();
@@ -287,7 +287,7 @@ console.log('glej da ne rabotes');
           addClassInvalid(input);
         }
       })
-
+console.log('aaaaa');
       $('#input_location').on('input', function() {
         var input = $(this);
         var location = input.val().trim();
@@ -331,7 +331,7 @@ console.log('glej da ne rabotes');
           addClassInvalid(input);
         }
       })
-
+console.log('ke vides ti');
       $('#input_yearOfBirth').on('input', function() {
         var input = $(this);
         var yearOfBirth = input.val();
@@ -395,7 +395,7 @@ console.log('glej da ne rabotes');
           $('input[name="familyStatus"]').removeClass('invalid-radio').addClass('valid-radio');
         }
       })
-
+console.log('dosta zaebancii');
       // In case user clicks on submit without selecting a button,
       // all radio button borders related to professionStatus
       // are then highlighted red. If user then after selects any radio button,
@@ -426,7 +426,7 @@ console.log('glej da ne rabotes');
         window.open($(this).attr('href'), $(this).attr('target'));
         return false;
       });
-
+console.log('nem neso da se seknam');
       // After Form Submitted Validation
       $('#personalDataSubmit input').click(
           function(event) {
@@ -529,3 +529,4 @@ console.log('glej da ne rabotes');
       console.log('top', window.top);
       window.parent.postMessage({ source: 'ims-loyalty', width: window.innerWidth, height: window.innerHeight }, '*');
     })
+console.log('izgleda mi e tuka problem facepalm');
