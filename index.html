@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Security-Policy" content="frame-src http://localhost:3100 https://*.local.de https://dgl.local.de https://*.dglecom.net https://douglas.de">
+<title>Douglas Online Registration - Angaben zur Person</title>
+
+<!-- Referring to custom CSS  -->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<!-- Referring to Bootstrap & JQuery CSS -->
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/webjars/jquery-ui/1.12.1/jquery-ui.min.css">
+
+<!-- Referring to Bootstrap & JQuery JS -->
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<script src="/webjars/popper.js/2.0.2/umd/popper.min.js"></script>
+<script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/personal-data.js"></script>
+</head>
+
+<body>
+  <div align="right" style="font-size: 15px;">
+    Douglas Online Registration version 1.0.15
+  </div>
+  <div>
+
+    <form id="personalData" action="/douglasCardAntrag/schritt1" method="post" class="col-md-6 offset-lg-3">
+
+      
+
+      
+      
+
+      
+      
+
+      
+
+      
+
+      <div id="alertAge" class="alert alert-danger">
+        <span style="font-size: 20px;">&#9888;</span> Alter ist nicht über 18
+      </div>
+
+      <div class="header">
+        <h6 class="upper-case">Persönliche Daten</h6>
+        <hr>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <div class="select-wrap">
+            <label>Anrede *</label>
+            <div class="select-wrap-2">
+              <select id="salutation" style="width: 100%;" required name="salutation">
+                <option value="">Bitte wählen Sie...</option>
+                <option value="1">Herr</option>
+                <option value="2">Frau</option>
+                <option value="5">Divers</option>
+              </select>
+            </div>
+          </div>
+          <div class="alert alert-danger error select">Ungültig</div>
+        </div>
+      </div>
+      
+      
+     
+
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <input type="text" class="form-control" id="input_firstName" name="firstName" maxlength="40" onchange="this.value = this.value.trim()"
+            required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Vorname des Kontoinhabers</span>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <input type="text" class="form-control" id="input_lastName" name="lastName" maxlength="40" onchange="this.value = this.value.trim()"
+            required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Nachname des Kontoinhabers</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-9">
+          <input type="text" class="form-control" id="input_streetName" name="streetName" maxlength="80" onchange="this.value = this.value.trim()"
+            required value="">
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Straße</span>
+        </div>
+        <div class="form-group col-sm-3">
+          <input type=text class="form-control" id="input_houseNumber" name="houseNumber" maxlength="8" onchange="this.value = this.value.trim()"
+            required value="">
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Hausnummer</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-12">
+          <input type="text" class="form-control" id="input_additionalAddress" name="additionalAddress" maxlength="40" placeholder=""
+            onchange="this.value = this.value.trim()" value=""> <span
+            class="floating-label-field-not-required" id="spanAdditionalAddress">Adresszusatz</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-2">
+          <input type="text" class="form-control" id="input_zipCode" name="zipCode" maxlength="10" required value="">
+
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">PLZ</span>
+        </div>
+
+        <div class="form-group col-sm-10">
+          <input type="text" class="form-control" id="input_location" name="location" maxlength="50" onchange="this.value = this.value.trim()"
+            required value="">
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Ort</span>
+        </div>
+
+        <div class="form-group col-sm-12">
+          <div class="select-large">
+            <label>Land *</label>
+            <div class="select-large-2">
+              <select id="country" style="width: 100%;" required name="country">
+                <option value="276">Deutschland</option>
+                <option value="756">Schweiz</option>
+                <option value="250">Frankreich</option>
+                <option value="528">Niederlande</option>
+                <option value="203">Tschechien</option>
+                <option value="40">Oesterreich</option>
+                <option value="56">Belgien</option>
+                <option value="616">Polen</option>
+                <option value="442">Luxemburg</option>
+                <option value="208">Daenemark</option>
+                <option value="380">Italian</option>
+                <option value="724">Spanien</option>
+                <option value="752">Schweden</option>
+                <option value="826">Vereinigtes Königreich</option>
+                <option value="703">Slowakei</option>
+                <option value="578">Norwegen</option>
+                <option value="705">Slowenien</option>
+                <option value="348">Ungarn</option>
+                <option value="440">Litauen</option>
+                <option value="438">Liechtenstein</option>
+                <option value="620">Portugal</option>
+                <option value="643">Russland</option>
+                <option value="642">Rumaenien</option>
+                <option value="191">Kroatien</option>
+                <option value="300">Griechenland</option>
+                <option value="100">Bulgarien</option>
+                <option value="804">Ukraine</option>
+                <option value="428">Lettland</option>
+                <option value="246">Finnland</option>
+                <option value="792">Tuerkei</option>
+                <option value="156">China</option>
+                <option value="512">Oman</option>
+                <option value="840">Amerika</option>
+                <option value="70">Bosnien</option>
+                <option value="530">Niederlaendische Antillen</option>
+                <option value="376">Israel</option>
+                <option value="233">Estland</option>
+                <option value="891">Serbien und Montenegro</option>
+                <option value="196">Zypern</option>
+                <option value="470">Malta</option>
+                <option value="422">Libanon</option>
+                <option value="702">Singapur</option>
+                <option value="28">Antigua und Barbuda</option>
+                <option value="410">Suedkorea</option>
+                <option value="214">Dominikanische Rep.</option>
+                <option value="260">Franzoesische Antarktisgebiete</option>
+                <option value="458">Malaysia</option>
+                <option value="710">Suedafrika</option>
+                <option value="372">Irland</option>
+                <option value="76">Brasilien</option>
+                <option value="499">Montenegro</option>
+                <option value="124">Kanada</option>
+                <option value="398">Kasachstan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <label for="inputBirthday">Geburtsdatum</label>
+      <div class="form-row">
+        <div class="form-group col-sm-4">
+          <input type="text" class="form-control" id="input_dayOfBirth" name="dayOfBirth" maxlength="2" onchange="this.value = this.value.trim()"
+            required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">TT</span>
+        </div>
+        <div class="form-group col-sm-4">
+          <input type="text" class="form-control" id="input_monthOfBirth" name="monthOfBirth" maxlength="2" onchange="this.value = this.value.trim()"
+            required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">MM</span>
+        </div>
+        <div class="form-group col-sm-4">
+          <input type="text" class="form-control" id="input_yearOfBirth" name="yearOfBirth" maxlength="4" onchange="this.value = this.value.trim()"
+            required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">JJJJ</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <input type="text" class="form-control" id="input_telephoneNumber" name="telephoneNumber" maxlength="20"
+            onchange="this.value = this.value.trim()" required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Telefonnummer</span>
+        </div>
+        <div class="form-group col-sm-6">
+          <input type="text" class="form-control" id="input_mobileNumber" name="mobileNumber" maxlength="20" required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">Mobilnummer</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-6">
+          <input type="text" class="form-control" id="input_email" name="email" maxlength="80" onchange="this.value = this.value.trim()" required>
+          <div class="alert alert-danger error">Ungültig</div>
+          <span class="floating-label-field-required">E-Mail-Adresse</span>
+        </div>
+      </div>
+
+      <div class="header">
+        <h6 class="upper-case">Familienstand</h6>
+        <hr>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="familyStatus" id="radioSingle" value="1" required> <label class="form-check-label role"
+          for="radioSingle"> Alleinstehend </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="familyStatus" id="radioMarried" value="2"> <label class="form-check-label role"
+          for="radioMarried">Verheiratet </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="familyStatus" id="radioNotSpecified" value="99"> <label class="form-check-label role"
+          for="radioNotSpecified"> Sonstiges/Keine Angabe </label>
+      </div>
+
+      <div class="header">
+        <h6 class="upper-case">ICH BIN</h6>
+        <hr>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioEmployee" value="1" required> <label
+          class="form-check-label role" for="radioEmployee"> Angestellte(r) </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioCivilServant" value="7"> <label class="form-check-label role"
+          for="radioCivilServant"> Beamtin/Beamte </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioSelfEmployed" value="2"> <label class="form-check-label role"
+          for="radioSelfEmployed"> Selbstständig </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioHomeMaker" value="5"> <label class="form-check-label role"
+          for="radioHomeMaker"> Hausfrau/-mann </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioPensioner" value="3"> <label class="form-check-label role"
+          for="radioPensioner"> Rentner(in) </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioPupil" value="13"> <label class="form-check-label role"
+          for="radioPupil"> Schüler(in) </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioStudent" value="14"> <label class="form-check-label role"
+          for="radioStudent"> Student(in) </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="professionStatus" id="radioNoDetails" value="99"> <label class="form-check-label role"
+          for="radioNoDetails"> Sonstiges/Keine Angabe </label>
+      </div>
+
+      <div class="header">
+        <h6>AGBs und Datenschutz</h6>
+        <hr>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="termsAndConditions" id="input_termsAndConditions"> <label
+          class="form-check-label role">Hiermit akzeptiere ich die <a href="https://www.douglas.de/help/agb">AGBs</a> und die <a
+          href="https://www.douglas.de/card/mehr-erfahren/datenschutzinformationen">Datenschutzerklärung</a></label>
+        <div id="missedTermsConditionsApprove" class="alert alert-danger">Bitte bestätigen Sie die AGBs und die Datenschutzerklärung</div>
+      </div>
+
+      <!--       <p id="clearStorageTest">Clear Storage</p> -->
+      <div id="personalDataSubmit" class="button-wrap">
+        <input type="submit" name="submit" value="WEITER ZU SCHRITT 2">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
