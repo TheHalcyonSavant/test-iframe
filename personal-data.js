@@ -526,6 +526,6 @@ $(document).ready(
             }
           });
       console.log('before postMessage', window.parent.postMessage);
-      window.parent.postMessage({ source: 'ims-loyalty', width: window.innerWidth, height: window.innerHeight }, '*');
+      window.parent.postMessage({ source: 'ims-loyalty', height: $('form').height() }, '*');
     })
 console.log('end personal-data');
